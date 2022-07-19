@@ -14,7 +14,7 @@ use App\Http\Controllers\ImageUploadController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('images');
 });
 
 Route::resource('/images', ImageUploadController::class);

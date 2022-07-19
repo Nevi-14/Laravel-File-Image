@@ -1,12 +1,19 @@
 @extends('system.layout')
 @section('content')
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="display:flex;justify-content:center;align-items:center">
+      <img src="{{asset('storage/code.svg')}}" alt="" width="40" height="40" class="d-inline-block align-text-top">
+    <span style="margin:0.5rem;text-transform:uppercase">Laravel File Manager</span>
+      
+    </a>
+    <a href="{{url('/images')}}" class="btn btn-success btn-sm" style="margin:20px;">Return</a>
+  </div>
+</nav>
+
 <div class="card" style="margin:20px">
 
-<div class="card-header" >
-  <strong style="text-transform: uppercase;">  Create new Image</strong>
 
-    <a href="{{url('/images')}}" class="btn btn-success btn-sm float-end" >Return</a>
-</div>
 
 <div class="card-body">
     <form action="{{url('images')}}" method="post" enctype="multipart/form-data">
